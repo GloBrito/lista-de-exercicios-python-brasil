@@ -27,8 +27,18 @@ Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, consid
 
 """
 
-
+import math
 def calcular_latas_e_preco_de_tinta():
     """Escreva aqui em baixo a sua solução"""
-tamanho_metros = float(input('Digite o tamanho em metros'))
+
+# Quando comprar apenas latas
+    tamanho_m2 = float(input('Digite o tamanho em metros'))
+    cobertura_por_litro = 6
+    quantidade_lata = 18
+    litros_necessarios = tamanho_m2 / cobertura_por_litro
+    print(f'Você deve comprar {litros_necessarios} litros de tinta') 
+
+
+# Quando comprar galões:
+
 

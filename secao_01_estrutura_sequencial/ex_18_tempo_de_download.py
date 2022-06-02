@@ -25,3 +25,4 @@ def calcular_tempo_de_download():
     velocidade = float(input('Digite a velocidade em Mbps'))
     download = (tamanho_arquivo *8 / velocidade) /60
     print(f'O tempo aproximado do Download é: {download:.0f} minuto(s)')
+
