@@ -53,3 +53,125 @@ até R$ 99999,99
 
 def calcular_salario_liquido(valor_hora: float, horas_trabalhadas: int):
     """Escreva aqui em baixo a sua solução"""
+    salario_bruto = valor_hora * horas_trabalhadas
+
+#INSS
+
+    inss_taxa = (0.1)
+    inss_porcento_escrito = inss_taxa*100
+    inss_valor = inss_taxa*salario_bruto
+
+#SINDICATO
+
+    sind_taxa = (0.03)
+    sind_porcento_escrito = sind_taxa * 100
+    sind_valor = sind_taxa * salario_bruto
+
+#FGTS
+
+    fgts_taxa = (0.11)
+    fgts_porcento_escrito = fgts_taxa * 100
+    fgts_valor = fgts_taxa * salario_bruto
+
+#IR ISENTO
+
+    if salario_bruto <= 900:
+
+#IR
+
+      ir_taxa = (0)
+      ir_porcento_escrito = ir_taxa * 100
+      ir_valor = ir_taxa * salario_bruto
+
+#Todos os Descontos
+
+      desconto_total = ir_valor + inss_valor + sind_valor
+
+#Salário Líquido
+
+      salario_liq = salario_bruto-desconto_total
+
+      print(f'Salário Bruto: (R$ {valor_hora:.2f} * {horas_trabalhadas})     : R$   {salario_bruto:.2f}')
+      print(f'(-) IR ({ir_porcento_escrito:.0f}%)                        : R$     {ir_valor:.2f}')
+      print(f'(-) INSS ({inss_porcento_escrito:.0f}%)                     : R$    {inss_valor:.2f}')
+      print(f'(-) Sindicato ({sind_porcento_escrito:.0f}%)                 : R$     {sind_valor:.2f}')
+      print(f'FGTS ({fgts_porcento_escrito:.0f}%)                         : R$    {fgts_valor:.2f}')
+      print(f'Total de descontos                 : R$    {desconto_total:.2f}')
+      print(f'Salário Liquido                    : R$   {salario_liq:.2f}')
+
+
+#IR 5% 
+ 
+    if salario_bruto > 900 and salario_bruto <= 1500:
+#IR
+
+      ir_taxa = (0.05)
+      ir_porcento_escrito = ir_taxa * 100
+      ir_valor = ir_taxa * salario_bruto
+      
+#Todos os Descontos
+
+      desconto_total = ir_valor + inss_valor + sind_valor
+      
+#Salário Líquido 
+      salario_liq = salario_bruto - desconto_total
+
+      print(f'Salário Bruto: (R$ {valor_hora:.2f} * {horas_trabalhadas})     : R$  {salario_bruto:.2f}')
+      print(f'(-) IR ({ir_porcento_escrito:.0f}%)                        : R$    {ir_valor:.2f}')
+      print(f'(-) INSS ({inss_porcento_escrito:.0f}%)                     : R$   {inss_valor:.2f}')
+      print(f'(-) Sindicato ({sind_porcento_escrito:.0f}%)                 : R$    {sind_valor:.2f}')
+      print(f'FGTS ({fgts_porcento_escrito:.0f}%)                         : R$   {fgts_valor:.2f}')
+      print(f'Total de descontos                 : R$   {desconto_total:.2f}')
+      print(f'Salário Liquido                    : R$   {salario_liq:.2f}')
+
+#IR 10%
+
+    if salario_bruto >1500 and salario_bruto <= 2500:
+    
+#IR
+      
+      ir_taxa = (0.1)
+      ir_porcento_escrito = ir_taxa * 100
+      ir_valor = ir_taxa * salario_bruto
+      
+#Todos os Descontos
+
+      desconto_total = ir_valor + inss_valor + sind_valor
+
+#Salário Líquido
+
+      salario_liq = salario_bruto - desconto_total
+
+      print(f'Salário Bruto: (R$ {valor_hora:.2f} * {horas_trabalhadas})    : R$  {salario_bruto:.2f}')
+      print(f'(-) IR ({ir_porcento_escrito:.0f}%)                       : R$   {ir_valor:.2f}')
+      print(f'(-) INSS ({inss_porcento_escrito:.0f}%)                     : R$   {inss_valor:.2f}')
+      print(f'(-) Sindicato ({sind_porcento_escrito:.0f}%)                 : R$    {sind_valor:.2f}')
+      print(f'FGTS ({fgts_porcento_escrito:.0f}%)                         : R$   {fgts_valor:.2f}')
+      print(f'Total de descontos                 : R$   {desconto_total:.2f}')
+      print(f'Salário Liquido                    : R$  {salario_liq:.2f}')
+
+#IR 20%
+
+    if salario_bruto > 2500:
+
+#IR
+
+      ir_taxa = (0.2)
+      ir_porcento_escrito = ir_taxa * 100
+      ir_valor = ir_taxa * salario_bruto
+
+#Todos os Descontos
+
+      desconto_total = ir_valor + inss_valor + sind_valor
+
+#Salário Líquido
+
+      salario_liq = salario_bruto - desconto_total
+
+      print(f'Salário Bruto: (R$ {valor_hora:.2f} * {horas_trabalhadas})   : R$ {salario_bruto:.2f}')
+      print(f'(-) IR ({ir_porcento_escrito:.0f}%)                       : R$  {ir_valor:.2f}')
+      print(f'(-) INSS ({inss_porcento_escrito:.0f}%)                     : R$  {inss_valor:.2f}')
+      print(f'(-) Sindicato ({sind_porcento_escrito:.0f}%)                 : R$   {sind_valor:.2f}')
+      print(f'FGTS ({fgts_porcento_escrito:.0f}%)                         : R$  {fgts_valor:.2f}')
+      print(f'Total de descontos                 : R$  {desconto_total:.2f}')
+      print(f'Salário Liquido                    : R$ {salario_liq:.2f}') 
