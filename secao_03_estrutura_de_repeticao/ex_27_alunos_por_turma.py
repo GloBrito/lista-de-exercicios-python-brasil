@@ -35,4 +35,18 @@ Arredonde o valor da média para baixo.
 
 
 def calcular_media_de_alunos_por_turma():
-    """Escreva aqui em baixo a sua solução"""
+    # """Escreva aqui em baixo a sua solução"""
+    # quant_turmas = int(input('Digite a quantidade de turmas: '))
+    # quant_alunos_por_turma = int(input('Digite a quantidade de alunos por turma: '))
+
+    turmas = int(input("Digite quantas turmas tem: "))
+    media = 0
+    for i in range(turmas):
+        while True:
+            alunos = int(input(f"Digite quantos alunos tem na turma {i + 1}: "))
+        if alunos <= 40:
+            break
+    media = ((media * i) + alunos) / (i + 1)
+    print(f"Media de alunos por turma: {media}")
+
+    ## TENHO QUE ACRESCENTAR O CEIL PARA ARREDONDAR A MÉDIA PARA BAIXO 
