@@ -35,15 +35,13 @@ def calcular_fatorial(n: int) -> int:
     """Escreva aqui em baixo a sua solução"""
 def calcular_fatorial(n): 
 
-    # if n < 0: 
-    #     print("Apenas valores positivos, inteiros e menores que 16 são válidos. Não é possível calcular para {}".format(n))
-
-    # elif n == 0: 
-    #     return 1
+    if n > 16 or n <= 0 or type(n) == float:
+        print(f"'Apenas valores positivos, inteiros e menores que 16 são válidos. Não é possível calcular para {n}'")
+    else:
+        resultado=1
         
-    # else: 
-    #     fact = 1
-    #     while(n > 1): 
-    #         fact *= n
-    #         n -= 1
-    #     return fact
+        i=1
+        while i <= n:
+            resultado *= i
+            i += 1
+        print(resultado)
