@@ -19,3 +19,6 @@ Mostrar apenas valor inteiro da temperatura
 
 def transformar_para_celsius():
     """Escreva aqui em baixo a sua solução"""
+    tempf = int(input('Digite a temperatura em Fahrenheit: '))
+    celsius = round(5 * ((tempf-32) / 9))
+    print(f'Essa temperatura é de {celsius} Celsius')

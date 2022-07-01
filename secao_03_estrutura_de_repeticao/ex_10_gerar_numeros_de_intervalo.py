@@ -10,9 +10,29 @@ Faça um programa que receba dois números inteiros e gere os números inteiros 
     '-10, -9, -8, -7, -6, -5, -4, -3, -2'
     >>> calcular_numeros_no_intervalo(-1, -10)
     ''
-
+    >>> calcular_numeros_no_intervalo(1, 1)
+    ''
 """
-
 
 def calcular_numeros_no_intervalo(inicio: int, fim: int) -> str:
     """Escreva aqui em baixo a sua solução"""
+    # if inicio > fim:
+    #     print("''")
+    #     return
+
+    # print("'", end='')
+    # for n in range(inicio,fim):
+    #     if n < fim - 1:
+    #         print(n, end=', ')
+    #     else:    
+    #         print(n, end="'")
+
+    if inicio < fim:
+            print("'", end='')
+            for n in range(inicio,fim):
+                if n < fim - 1:
+                    print(n, end=', ')
+                else:    
+                    print(n, end="'")
+    else:
+        print("''")
